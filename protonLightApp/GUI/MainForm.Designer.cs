@@ -56,6 +56,13 @@ namespace protonLightApp
             this.DeleteEventButton = new System.Windows.Forms.Button();
             this.RefreshEventsButton = new System.Windows.Forms.Button();
             this.EventsCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.StudentsCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.EditStudentButton = new System.Windows.Forms.Button();
+            this.AddStudentButton = new System.Windows.Forms.Button();
+            this.RefreshStudentsButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.RankingPage.SuspendLayout();
             this.RankingPageTableLayout.SuspendLayout();
@@ -65,8 +72,11 @@ namespace protonLightApp
             this.TableLayout3.SuspendLayout();
             this.TableLayout4.SuspendLayout();
             this.EventsPage.SuspendLayout();
+            this.StudentsPage.SuspendLayout();
             this.TableLayout5.SuspendLayout();
             this.TableLayout6.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -90,7 +100,7 @@ namespace protonLightApp
             this.RankingPage.Location = new System.Drawing.Point(4, 29);
             this.RankingPage.Name = "RankingPage";
             this.RankingPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RankingPage.Size = new System.Drawing.Size(1098, 928);
+            this.RankingPage.Size = new System.Drawing.Size(976, 578);
             this.RankingPage.TabIndex = 0;
             this.RankingPage.Text = "Ranking";
             this.RankingPage.UseVisualStyleBackColor = true;
@@ -110,7 +120,7 @@ namespace protonLightApp
             this.RankingPageTableLayout.RowCount = 2;
             this.RankingPageTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.RankingPageTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.RankingPageTableLayout.Size = new System.Drawing.Size(1092, 922);
+            this.RankingPageTableLayout.Size = new System.Drawing.Size(970, 572);
             this.RankingPageTableLayout.TabIndex = 0;
             // 
             // ClassRankingListBox
@@ -119,9 +129,9 @@ namespace protonLightApp
             this.ClassRankingListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ClassRankingListBox.FormattingEnabled = true;
             this.ClassRankingListBox.ItemHeight = 20;
-            this.ClassRankingListBox.Location = new System.Drawing.Point(549, 123);
+            this.ClassRankingListBox.Location = new System.Drawing.Point(488, 123);
             this.ClassRankingListBox.Name = "ClassRankingListBox";
-            this.ClassRankingListBox.Size = new System.Drawing.Size(540, 796);
+            this.ClassRankingListBox.Size = new System.Drawing.Size(479, 446);
             this.ClassRankingListBox.TabIndex = 6;
             // 
             // IndividualRankingListBox
@@ -132,7 +142,7 @@ namespace protonLightApp
             this.IndividualRankingListBox.ItemHeight = 20;
             this.IndividualRankingListBox.Location = new System.Drawing.Point(3, 123);
             this.IndividualRankingListBox.Name = "IndividualRankingListBox";
-            this.IndividualRankingListBox.Size = new System.Drawing.Size(540, 796);
+            this.IndividualRankingListBox.Size = new System.Drawing.Size(479, 446);
             this.IndividualRankingListBox.TabIndex = 5;
             // 
             // TableLayout1
@@ -147,7 +157,7 @@ namespace protonLightApp
             this.TableLayout1.RowCount = 2;
             this.TableLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.TableLayout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayout1.Size = new System.Drawing.Size(540, 114);
+            this.TableLayout1.Size = new System.Drawing.Size(479, 114);
             this.TableLayout1.TabIndex = 0;
             // 
             // TableLayout2
@@ -219,12 +229,12 @@ namespace protonLightApp
             this.TableLayout3.Controls.Add(this.label4, 0, 1);
             this.TableLayout3.Controls.Add(this.TableLayout4, 0, 0);
             this.TableLayout3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TableLayout3.Location = new System.Drawing.Point(549, 3);
+            this.TableLayout3.Location = new System.Drawing.Point(488, 3);
             this.TableLayout3.Name = "TableLayout3";
             this.TableLayout3.RowCount = 2;
             this.TableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.TableLayout3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TableLayout3.Size = new System.Drawing.Size(540, 114);
+            this.TableLayout3.Size = new System.Drawing.Size(479, 114);
             this.TableLayout3.TabIndex = 1;
             // 
             // label4
@@ -234,7 +244,7 @@ namespace protonLightApp
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(3, 68);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(534, 46);
+            this.label4.Size = new System.Drawing.Size(473, 46);
             this.label4.TabIndex = 29;
             this.label4.Text = "Ranking klasowy";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,7 +263,7 @@ namespace protonLightApp
             this.TableLayout4.Name = "TableLayout4";
             this.TableLayout4.RowCount = 1;
             this.TableLayout4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TableLayout4.Size = new System.Drawing.Size(534, 62);
+            this.TableLayout4.Size = new System.Drawing.Size(473, 62);
             this.TableLayout4.TabIndex = 0;
             // 
             // label3
@@ -306,10 +316,11 @@ namespace protonLightApp
             // 
             // StudentsPage
             // 
+            this.StudentsPage.Controls.Add(this.tableLayoutPanel1);
             this.StudentsPage.Location = new System.Drawing.Point(4, 29);
             this.StudentsPage.Name = "StudentsPage";
             this.StudentsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.StudentsPage.Size = new System.Drawing.Size(1098, 928);
+            this.StudentsPage.Size = new System.Drawing.Size(976, 578);
             this.StudentsPage.TabIndex = 2;
             this.StudentsPage.Text = "Uczniowie";
             this.StudentsPage.UseVisualStyleBackColor = true;
@@ -319,7 +330,7 @@ namespace protonLightApp
             this.ManagementPage.Location = new System.Drawing.Point(4, 29);
             this.ManagementPage.Name = "ManagementPage";
             this.ManagementPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ManagementPage.Size = new System.Drawing.Size(1098, 928);
+            this.ManagementPage.Size = new System.Drawing.Size(976, 578);
             this.ManagementPage.TabIndex = 3;
             this.ManagementPage.Text = "Zarządzanie";
             this.ManagementPage.UseVisualStyleBackColor = true;
@@ -416,6 +427,98 @@ namespace protonLightApp
             this.EventsCheckedListBox.Size = new System.Drawing.Size(964, 466);
             this.EventsCheckedListBox.TabIndex = 1;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.StudentsCheckedListBox, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(970, 572);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // StudentsCheckedListBox
+            // 
+            this.StudentsCheckedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentsCheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.StudentsCheckedListBox.FormattingEnabled = true;
+            this.StudentsCheckedListBox.HorizontalScrollbar = true;
+            this.StudentsCheckedListBox.Location = new System.Drawing.Point(3, 103);
+            this.StudentsCheckedListBox.Name = "StudentsCheckedListBox";
+            this.StudentsCheckedListBox.ScrollAlwaysVisible = true;
+            this.StudentsCheckedListBox.Size = new System.Drawing.Size(964, 466);
+            this.StudentsCheckedListBox.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.EditStudentButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.AddStudentButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.RefreshStudentsButton, 3, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(964, 94);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Enabled = false;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.Location = new System.Drawing.Point(485, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 88);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Usuń ucznia";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // EditStudentButton
+            // 
+            this.EditStudentButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditStudentButton.Enabled = false;
+            this.EditStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EditStudentButton.Location = new System.Drawing.Point(244, 3);
+            this.EditStudentButton.Name = "EditStudentButton";
+            this.EditStudentButton.Size = new System.Drawing.Size(235, 88);
+            this.EditStudentButton.TabIndex = 3;
+            this.EditStudentButton.Text = "Edytuj ucznia";
+            this.EditStudentButton.UseVisualStyleBackColor = true;
+            // 
+            // AddStudentButton
+            // 
+            this.AddStudentButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AddStudentButton.Location = new System.Drawing.Point(3, 3);
+            this.AddStudentButton.Name = "AddStudentButton";
+            this.AddStudentButton.Size = new System.Drawing.Size(235, 88);
+            this.AddStudentButton.TabIndex = 2;
+            this.AddStudentButton.Text = "Dodaj ucznia";
+            this.AddStudentButton.UseVisualStyleBackColor = true;
+            // 
+            // RefreshStudentsButton
+            // 
+            this.RefreshStudentsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RefreshStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RefreshStudentsButton.Location = new System.Drawing.Point(726, 3);
+            this.RefreshStudentsButton.Name = "RefreshStudentsButton";
+            this.RefreshStudentsButton.Size = new System.Drawing.Size(235, 88);
+            this.RefreshStudentsButton.TabIndex = 5;
+            this.RefreshStudentsButton.Text = "Odśwież";
+            this.RefreshStudentsButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -437,8 +540,11 @@ namespace protonLightApp
             this.TableLayout4.ResumeLayout(false);
             this.TableLayout4.PerformLayout();
             this.EventsPage.ResumeLayout(false);
+            this.StudentsPage.ResumeLayout(false);
             this.TableLayout5.ResumeLayout(false);
             this.TableLayout6.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -472,6 +578,13 @@ namespace protonLightApp
         private System.Windows.Forms.Button AddEventButton;
         private System.Windows.Forms.Button RefreshEventsButton;
         private System.Windows.Forms.CheckedListBox EventsCheckedListBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.CheckedListBox StudentsCheckedListBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button EditStudentButton;
+        private System.Windows.Forms.Button AddStudentButton;
+        private System.Windows.Forms.Button RefreshStudentsButton;
     }
 }
 
