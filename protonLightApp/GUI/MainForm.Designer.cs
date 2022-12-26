@@ -49,6 +49,13 @@ namespace protonLightApp
             this.EventsPage = new System.Windows.Forms.TabPage();
             this.StudentsPage = new System.Windows.Forms.TabPage();
             this.ManagementPage = new System.Windows.Forms.TabPage();
+            this.TableLayout5 = new System.Windows.Forms.TableLayoutPanel();
+            this.TableLayout6 = new System.Windows.Forms.TableLayoutPanel();
+            this.AddEventButton = new System.Windows.Forms.Button();
+            this.EditEventButton = new System.Windows.Forms.Button();
+            this.DeleteEventButton = new System.Windows.Forms.Button();
+            this.RefreshEventsButton = new System.Windows.Forms.Button();
+            this.EventsCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.MainTabControl.SuspendLayout();
             this.RankingPage.SuspendLayout();
             this.RankingPageTableLayout.SuspendLayout();
@@ -57,6 +64,9 @@ namespace protonLightApp
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfPositionsToDisplayNumericUpDown)).BeginInit();
             this.TableLayout3.SuspendLayout();
             this.TableLayout4.SuspendLayout();
+            this.EventsPage.SuspendLayout();
+            this.TableLayout5.SuspendLayout();
+            this.TableLayout6.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -70,7 +80,7 @@ namespace protonLightApp
             this.MainTabControl.Location = new System.Drawing.Point(0, 0);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(1106, 961);
+            this.MainTabControl.Size = new System.Drawing.Size(984, 611);
             this.MainTabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.MainTabControl.TabIndex = 0;
             // 
@@ -285,10 +295,11 @@ namespace protonLightApp
             // 
             // EventsPage
             // 
+            this.EventsPage.Controls.Add(this.TableLayout5);
             this.EventsPage.Location = new System.Drawing.Point(4, 29);
             this.EventsPage.Name = "EventsPage";
             this.EventsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.EventsPage.Size = new System.Drawing.Size(1098, 928);
+            this.EventsPage.Size = new System.Drawing.Size(976, 578);
             this.EventsPage.TabIndex = 1;
             this.EventsPage.Text = "Wydarzenia";
             this.EventsPage.UseVisualStyleBackColor = true;
@@ -313,11 +324,103 @@ namespace protonLightApp
             this.ManagementPage.Text = "Zarządzanie";
             this.ManagementPage.UseVisualStyleBackColor = true;
             // 
+            // TableLayout5
+            // 
+            this.TableLayout5.ColumnCount = 1;
+            this.TableLayout5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayout5.Controls.Add(this.EventsCheckedListBox, 0, 1);
+            this.TableLayout5.Controls.Add(this.TableLayout6, 0, 0);
+            this.TableLayout5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableLayout5.Location = new System.Drawing.Point(3, 3);
+            this.TableLayout5.Name = "TableLayout5";
+            this.TableLayout5.RowCount = 2;
+            this.TableLayout5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.TableLayout5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayout5.Size = new System.Drawing.Size(970, 572);
+            this.TableLayout5.TabIndex = 0;
+            // 
+            // TableLayout6
+            // 
+            this.TableLayout6.ColumnCount = 4;
+            this.TableLayout6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayout6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayout6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayout6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TableLayout6.Controls.Add(this.DeleteEventButton, 0, 0);
+            this.TableLayout6.Controls.Add(this.EditEventButton, 0, 0);
+            this.TableLayout6.Controls.Add(this.AddEventButton, 0, 0);
+            this.TableLayout6.Controls.Add(this.RefreshEventsButton, 3, 0);
+            this.TableLayout6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TableLayout6.Location = new System.Drawing.Point(3, 3);
+            this.TableLayout6.Name = "TableLayout6";
+            this.TableLayout6.RowCount = 1;
+            this.TableLayout6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TableLayout6.Size = new System.Drawing.Size(964, 94);
+            this.TableLayout6.TabIndex = 0;
+            // 
+            // AddEventButton
+            // 
+            this.AddEventButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AddEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AddEventButton.Location = new System.Drawing.Point(3, 3);
+            this.AddEventButton.Name = "AddEventButton";
+            this.AddEventButton.Size = new System.Drawing.Size(235, 88);
+            this.AddEventButton.TabIndex = 2;
+            this.AddEventButton.Text = "Dodaj wydarzenie";
+            this.AddEventButton.UseVisualStyleBackColor = true;
+            // 
+            // EditEventButton
+            // 
+            this.EditEventButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditEventButton.Enabled = false;
+            this.EditEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EditEventButton.Location = new System.Drawing.Point(244, 3);
+            this.EditEventButton.Name = "EditEventButton";
+            this.EditEventButton.Size = new System.Drawing.Size(235, 88);
+            this.EditEventButton.TabIndex = 3;
+            this.EditEventButton.Text = "Edytuj wydarzenie";
+            this.EditEventButton.UseVisualStyleBackColor = true;
+            // 
+            // DeleteEventButton
+            // 
+            this.DeleteEventButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DeleteEventButton.Enabled = false;
+            this.DeleteEventButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DeleteEventButton.Location = new System.Drawing.Point(485, 3);
+            this.DeleteEventButton.Name = "DeleteEventButton";
+            this.DeleteEventButton.Size = new System.Drawing.Size(235, 88);
+            this.DeleteEventButton.TabIndex = 4;
+            this.DeleteEventButton.Text = "Usuń wydarzenie";
+            this.DeleteEventButton.UseVisualStyleBackColor = true;
+            // 
+            // RefreshEventsButton
+            // 
+            this.RefreshEventsButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RefreshEventsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RefreshEventsButton.Location = new System.Drawing.Point(726, 3);
+            this.RefreshEventsButton.Name = "RefreshEventsButton";
+            this.RefreshEventsButton.Size = new System.Drawing.Size(235, 88);
+            this.RefreshEventsButton.TabIndex = 5;
+            this.RefreshEventsButton.Text = "Odśwież";
+            this.RefreshEventsButton.UseVisualStyleBackColor = true;
+            // 
+            // EventsCheckedListBox
+            // 
+            this.EventsCheckedListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EventsCheckedListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EventsCheckedListBox.FormattingEnabled = true;
+            this.EventsCheckedListBox.HorizontalScrollbar = true;
+            this.EventsCheckedListBox.Location = new System.Drawing.Point(3, 103);
+            this.EventsCheckedListBox.Name = "EventsCheckedListBox";
+            this.EventsCheckedListBox.ScrollAlwaysVisible = true;
+            this.EventsCheckedListBox.Size = new System.Drawing.Size(964, 466);
+            this.EventsCheckedListBox.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 961);
+            this.ClientSize = new System.Drawing.Size(984, 611);
             this.Controls.Add(this.MainTabControl);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MinimumSize = new System.Drawing.Size(1000, 650);
@@ -333,6 +436,9 @@ namespace protonLightApp
             this.TableLayout3.ResumeLayout(false);
             this.TableLayout4.ResumeLayout(false);
             this.TableLayout4.PerformLayout();
+            this.EventsPage.ResumeLayout(false);
+            this.TableLayout5.ResumeLayout(false);
+            this.TableLayout6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -359,6 +465,13 @@ namespace protonLightApp
         private System.Windows.Forms.ComboBox SelectSexComboBox;
         private System.Windows.Forms.TabPage StudentsPage;
         private System.Windows.Forms.TabPage ManagementPage;
+        private System.Windows.Forms.TableLayoutPanel TableLayout5;
+        private System.Windows.Forms.TableLayoutPanel TableLayout6;
+        private System.Windows.Forms.Button DeleteEventButton;
+        private System.Windows.Forms.Button EditEventButton;
+        private System.Windows.Forms.Button AddEventButton;
+        private System.Windows.Forms.Button RefreshEventsButton;
+        private System.Windows.Forms.CheckedListBox EventsCheckedListBox;
     }
 }
 
