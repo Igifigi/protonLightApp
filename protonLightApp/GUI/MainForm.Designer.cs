@@ -46,7 +46,9 @@ namespace protonLightApp
             this.label3 = new System.Windows.Forms.Label();
             this.CreateRankingPDFButton = new System.Windows.Forms.Button();
             this.SelectSexComboBox = new System.Windows.Forms.ComboBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.EventsPage = new System.Windows.Forms.TabPage();
+            this.StudentsPage = new System.Windows.Forms.TabPage();
+            this.ManagementPage = new System.Windows.Forms.TabPage();
             this.MainTabControl.SuspendLayout();
             this.RankingPage.SuspendLayout();
             this.RankingPageTableLayout.SuspendLayout();
@@ -60,7 +62,9 @@ namespace protonLightApp
             // MainTabControl
             // 
             this.MainTabControl.Controls.Add(this.RankingPage);
-            this.MainTabControl.Controls.Add(this.tabPage2);
+            this.MainTabControl.Controls.Add(this.EventsPage);
+            this.MainTabControl.Controls.Add(this.StudentsPage);
+            this.MainTabControl.Controls.Add(this.ManagementPage);
             this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MainTabControl.Location = new System.Drawing.Point(0, 0);
@@ -279,15 +283,35 @@ namespace protonLightApp
             this.SelectSexComboBox.Size = new System.Drawing.Size(250, 28);
             this.SelectSexComboBox.TabIndex = 3;
             // 
-            // tabPage2
+            // EventsPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1098, 563);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.EventsPage.Location = new System.Drawing.Point(4, 29);
+            this.EventsPage.Name = "EventsPage";
+            this.EventsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.EventsPage.Size = new System.Drawing.Size(1098, 928);
+            this.EventsPage.TabIndex = 1;
+            this.EventsPage.Text = "Wydarzenia";
+            this.EventsPage.UseVisualStyleBackColor = true;
+            // 
+            // StudentsPage
+            // 
+            this.StudentsPage.Location = new System.Drawing.Point(4, 29);
+            this.StudentsPage.Name = "StudentsPage";
+            this.StudentsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.StudentsPage.Size = new System.Drawing.Size(1098, 928);
+            this.StudentsPage.TabIndex = 2;
+            this.StudentsPage.Text = "Uczniowie";
+            this.StudentsPage.UseVisualStyleBackColor = true;
+            // 
+            // ManagementPage
+            // 
+            this.ManagementPage.Location = new System.Drawing.Point(4, 29);
+            this.ManagementPage.Name = "ManagementPage";
+            this.ManagementPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ManagementPage.Size = new System.Drawing.Size(1098, 928);
+            this.ManagementPage.TabIndex = 3;
+            this.ManagementPage.Text = "Zarządzanie";
+            this.ManagementPage.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -317,7 +341,7 @@ namespace protonLightApp
 
         private System.Windows.Forms.TabControl MainTabControl;
         private System.Windows.Forms.TabPage RankingPage;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage EventsPage;
         private System.Windows.Forms.TableLayoutPanel RankingPageTableLayout;
         private System.Windows.Forms.ListBox ClassRankingListBox;
         private System.Windows.Forms.ListBox IndividualRankingListBox;
@@ -333,6 +357,8 @@ namespace protonLightApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button CreateRankingPDFButton;
         private System.Windows.Forms.ComboBox SelectSexComboBox;
+        private System.Windows.Forms.TabPage StudentsPage;
+        private System.Windows.Forms.TabPage ManagementPage;
     }
 }
 
