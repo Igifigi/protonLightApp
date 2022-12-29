@@ -18,5 +18,10 @@ namespace protonLightApp.Model
             this.name = name;
             this.date = date;
         }
+
+        public override string ToString()
+        {
+            return id + ": " + name+ " " + date.ToString();
+        }
     }
 }

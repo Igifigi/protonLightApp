@@ -64,6 +64,7 @@
     <Compile Include="Model\Cache.cs" />
     <Compile Include="Model\Class.cs" />
     <Compile Include="Model\ClassLog.cs" />
+    <Compile Include="Model\Database.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\PointedClass.cs" />
     <Compile Include="Model\PointedStudent.cs" />

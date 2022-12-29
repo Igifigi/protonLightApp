@@ -14,15 +14,21 @@ namespace protonLightApp.Model
         internal string name { get; set; }
         internal string surname { get; set; }
         internal int class_id { get; set; }
-        internal bool sex { get; set; } //1 - boy, 0 - girl
+        internal int gender { get; set; } //1 - boy, 0 - girl
 
-        public Student(int id, string name, string surname, int class_id, bool sex)
+        public Student(int id, string name, string surname, int class_id, int gender)
         {
             this.id = id;
             this.name = name;
             this.surname = surname;
             this.class_id = class_id;
-            this.sex = sex;
+            this.gender = gender;
+        }
+
+        internal enum Gender
+        {
+            Female = 0,
+            Male = 1
         }
     }
 }

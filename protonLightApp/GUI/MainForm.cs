@@ -19,6 +19,9 @@ namespace protonLightApp
         public MainForm()
         {
             InitializeComponent();
+            Database db = new Database();
+            //db.add_student("Karol", "Świderski", 5, (int)Student.Gender.Male);
+            
             GetData();
         }
         
