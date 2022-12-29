@@ -20,6 +20,16 @@ namespace protonLightApp.Model
             student_logs = new List<StudentLog>();
         }
 
+        #region add
+        internal void add_event(string name, DateTime date)
+        {
+            int id = get_lowest_id(ref events);
+            Event _event = new Event(id, name, date);
+            if(id == events.Count)
+                events.Add(_event);
+            else
+                events[id] = _event;
+        }
         internal void add_student(string name, string surname, int class_id, int gender)
         {
             int id = get_lowest_id(ref students);
@@ -29,12 +39,68 @@ namespace protonLightApp.Model
             else
                 students[id] = student;
         }
-        internal void delete_student(int id)
+        internal void add_class(string name)
         {
-            if (students.Count - 1 < id)
+            int id = get_lowest_id(ref classes);
+            Class _class = new Class(id, name);
+            if(id == classes.Count)
+                classes.Add(_class);
+            else
+                classes[id] = _class;
+        }
+        internal void add_student_log(int student_id, int event_id, int points)
+        {
+            int id = get_lowest_id(ref student_logs);
+            StudentLog student_log = new StudentLog(id, student_id, event_id, points);
+            if (id == student_logs.Count)
+                student_logs.Add(student_log);
+            else
+                student_logs[id] = student_log;
+        }
+        internal void add_class_log(int class_id, int event_id, int points)
+        {
+            int id = get_lowest_id(ref class_logs);
+            ClassLog class_log = new ClassLog(id, class_id, event_id, points);
+            if(id == class_logs.Count)
+                class_logs.Add(class_log);
+            else
+                class_logs[id] = class_log;
+        }
+        #endregion
+
+        #region remove
+        internal void remove_event(int id)
+        {
+            if (id > events.Count - 1)
+                return;
+            events[id] = null;
+        }
+        internal void remove_class(int id)
+        {
+            if (id > classes.Count - 1)
+                return;
+            classes[id] = null;
+        }
+        internal void remove_class_log(int id)
+        {
+            if (id > class_logs.Count - 1)
+                return;
+            class_logs[id] = null;
+        }
+        internal void remove_student(int id)
+        {
+            if (id > students.Count - 1)
                 return;
             students[id] = null;
         }
+        internal void remove_student_log(int id)
+        {
+            if (id > student_logs.Count - 1)
+                return;
+            student_logs[id] = null;
+        }
+        #endregion
+
         #region get_lowest_id
         private int get_lowest_id(ref List<Event> list)
         {
